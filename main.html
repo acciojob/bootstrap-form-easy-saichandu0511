@@ -14,18 +14,30 @@
 		<label for="first-name-input"class="form-label">First Name</label>
 		<input type="text"id="first-name-input">
 		</div>
+		<div class="invalid-feedback">
+    Please enter your first name.
+</div>
 		<div class="mb-3">
 		<label for="last-name-input"class="form-label">Last Name</label>
 		<input type="text"id="last-name-input">
 		</div>
+		     <div class="invalid-feedback">
+    Please enter your Last name.
+</div>
 		<div class="mb-3">
 		<label for="email-input"class="form-label">Email Address</label>
 		<input type="email"id="email-input" placeholder="xyz@abc.com">
 		</div>
+		<div class="invalid-feedback">
+    Please enter your Email Address.
+</div>
 		<div class="mb-3">
 		<label for="college-input"class="form-label">College</label>
 		<input type="text"id="college-input">
 		</div>
+		<div class="invalid-feedback">
+    Please enter your College.
+</div>
 		<div class="mb-3">
 		<label for="Graduation year"class="form-label">Graduation year</label>
 		<select class="form-select">
@@ -36,19 +48,43 @@
 			<option value="2023">2023</option>
 		</select>
 		</div>
+		<div class="invalid-feedback">
+    Please enter your Graduation Year.
+</div>
 		<div class="mb-3">
 		<label for="roll-no-input"class="">Roll No.</label>
 		<input type="number"id="roll-no-input">
 		</div>
+		<div class="invalid-feedback">
+    Please enter your Roll No.
+</div>
 		<div class="mb-3 form-check">
 			<input type="checkbox"class="form-check-input" id="conditions-checkbox" name="conditions" required>
 		<label for="conditions-checkbox"class="form-check-label">	
 			Agree to terms and conditions
 		</label>
 		</div>
+		<div class="invalid-feedback">
+   You muat Agree to terms and conditions  .
+</div>
 		<button type="button"class="btn btn-primary">submit form</button>
 	</form>
 	</div>
+	<script>
+const form = document.getElementById("internship-form");
+
+form.addEventListener("submit", function(event) {
+
+    if (!form.checkValidity()) {
+        event.preventDefault();
+        event.stopPropagation();
+    }
+
+    form.classList.add("was-validated");
+
+});
+</script>
+
 	<!-- the entire body must be written by student -->
     <script type="text/javascript" src="./script.js">
 </script>
